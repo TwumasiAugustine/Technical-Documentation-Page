@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technical Documentation Page</title>
+  <link rel="stylesheet" href="./Css_folder/main.css">
+</head>
+<body>
+  <nav id="navbar">
+    <header>Python Documentation</header>
+    <ul>
+      <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+      <li><a class="nav-link" href="#Writing_a_Python_Program">Writing a Python Program</a></li>
+      <li><a class="nav-link" href="#The_Python_Interactive_Shell">The Python Interactive Shell</a></li>
+      <li><a class="nav-link" href="#A_Longer_Python_program">A Longer Python program</a></li>
+      <li><a class="nav-link" href="#Integer_and_String_Values">Integer and String Values</a></li>
+      <li><a class="nav-link" href="#Variables_and_Assignment">Variables and Assignment</a></li>
+      <li><a class="nav-link" href="#Identifiers">Identifiers</a></li>
+      <li><a class="nav-link" href="#Reference">Reference</a></li>
+    </ul>
+  </nav>
+  <main id="main-doc">
+    <section class="main-section" id="Introduction">
+      <article>
+        <header>Introduction</header>
+        <p>
+          <em>Guido van Rossum</em> created the Python programming language in the late <em>1980s</em>. In contrast to other popular
+          languages such as <strong>C</strong>,     <strong> C++</strong>, <strong>Java</strong>, and <strong>C#</strong>, Python strives to provide a simple but powerful syntax.
+        </p>
+        <p>
+          Python is used for software development at companies and organizations such as <strong>Google</strong>, <strong>Yahoo</strong>, <strong>Facebook</strong>,
+          <strong>CERN</strong>, <strong>Industrial Light and Magic</strong> , and <strong>NASA</strong>. Experienced programmers can accomplish great
+          things with Python, but Python’s beauty is that it is accessible to beginning programmers and allows them
+          to tackle interesting problems more quickly than many other, more complex languages that have a steeper
+          learning curve.
+        </p>
+      </article>
+    </section>
+    <section class="main-section" id="Writing_a_Python_Program">
+      <article>
+              <header>Writing a Python Program</header>
+        <p>
+          The text that makes up a Python program has a particular structure. The syntax must be correct, or the interpreter will generate error messages and not execute the program. This section introduces Python by providing a simple example program.
+        </p>
+        <p>
+          A program consists of one or more statements. A statement is an instruction that the interpreter executes.
+          The following statement invokes the print function to display a message:
+        </p>
+        <code>print(<span class="code-color">"This is a simple Python program"</span>)</code>
+        <p>
+          We can use the statement in a program. Listing 1.1 (simple.py) is one of the simplest Python programs that does something:
+        </p>
+        <p class="text-bg-color">
+          Listing 1.1: simple.py
+        </p>
+        <code class="zero-margin">
+          print(<span class="code-color">"This is a simple Python program"</span>)
+        </code>
+        <p>
+          We will use Wingware’s WingIDE 101 to develop our Python programs. This integrated development
+          environment is freely available from http://wingware.com/downloads/wingide-101, and its target audience
+          is beginning Python programmers. Its feature set and ease of use make WingIDE 101 an ideal
+          platform for exploring programming in Python.
+        </p>
+        <p>
+          The way you launch WingIDE 101 depends on your operating system and how it was installed. Figure
+          1.1 shows a screenshot of WingIDE 101 running on a Windows 8.1 computer. The IDE consists of a
+          menu bar at the top, along with a tool bar directly underneath it, and several sub-panes within the window.
+          The large, unlabeled pane in the upper left portion of the window is the editor pane in which we type in
+          our program’s source code. The versions of WingIDE 101 for Apple Mac OS X and Linux are similar in
+          appearance
+        </p>
+        <code>
+          print(<span class="code-color">"This is a simple Python program"</span>)
+        </code>
+        <p>
+          This is a Python statement. A statement is a command that the interpreter executes. This statement
+          prints the message This is a simple Python program on the screen. A statement is the fundamental unit of
+          execution in a Python program. Statements may be grouped into larger chunks called blocks, and blocks can
+          make up more complex statements. Higher-order constructs such as functions and methods are composed
+          of blocks. The statement
+        
+        <code>
+          print(<span class="code-color">"This is a simple Python program"</span>)
+        </code>
+        
+          makes use of a built in function named print. Python has a variety of different kinds of statements that we
+          can use to build programs, and the chapters that follow explore these various kinds of statements.
+        </p>
+      </article>
+    </section>
+    <section class="main-section" id="The_Python_Interactive_Shell">
+      <article>
+              <header>The Python Interactive Shell</header>
+        <p>
+          We created the program in Listing 1.1 (simple.py) and submitted it to the Python interpreter for execution.
+          We can interact with the interpreter directly, typing in Python statements and expressions for its immediate
+          execution.
+        </p>
+        <p>
+          The interpreter prompts the user for input with three greater-than symbols
+          (>>>). This means the user typed in the text on the line prefixed with >>>. Any lines without the >>> prefix
+          represent the interpreter’s output, or feedback, to the user.
+        </p>
+        <p>
+          We will find Python’s interactive interpreter invaluable for experimenting with various language constructs.
+          We can discover many things about Python without ever writing a complete program.
+        </p>
+        <p>
+          The WingIDE 101 interpreter pane displays black text on a white background. In
+          order for readers of this text to better distinguish visually program source code from program output, we
+          will render the user’s direct interaction with the Python interpreter as black text on a light-gray background.
+          As an example, the following shows a possible interactive session with a user:
+        </p>
+        <code>
+          >>> print(<span class="code-color">"Hello!"</span>)
+          Hello!
+        </code>
+        <p>
+          The interpreter prompt (>>>) prefixes all user input in the interactive shell. Lines that do not begin with the >>> prompt represent the interpreter’s response.
+        </p>
+      </article>
+    </section>
+    <section class="main-section" id="A_Longer_Python_program">
+      <article>
+        <header>A Longer Python program</header>
+        <p>
+          More interesting programs contain multiple statements. In Listing 1.2 (arrow.py), six print statements draw
+          an arrow on the screen:
+        </p>
+        <br><br>
+        <p class="text-bg-color">
+          Listing 1.2: arrow.py
+        </p>
+        <code class="zero-margin" id="block-text">
+          print(<span class="code-color">"     *   "</span>)
+          print(<span class="code-color">"  ***  "</span>)
+          print(<span class="code-color">"  ***** "</span>)
+          print(<span class="code-color">"   *   "</span>)
+          print(<span class="code-color">"   *   "</span>)
+          print(<span class="code-color">"   *   "</span>)
+        </code>
+        <p>
+          We wish the output of Listing 1.2 (arrow.py) to be 
+          <span  id="black-bg" class="black-bg">
+            <span id="content-mg">
+                *
+               ***
+              *****
+                *
+                *
+            </span>
+          </span>
+        </p>
+        <p>
+          If you try to enter each line one at a time into the interactive shell, the program’s output will be intermingled
+          with the statements you type. In this case the best approach is to type the program into an editor, save the
+          code you type to a file, and then execute the program. Most of the time we use an editor to enter and run
+          our Python programs. The interactive interpreter is most useful for experimenting with small snippets of
+          Python code.
+        </p>
+        <p>
+          In Listing 1.2 (arrow.py) each print statement “draws” a horizontal slice of the arrow. All the horizontal
+          slices stacked on top of each other results in the picture of the arrow. The statements form a block of Python
+          code. It is important that no whitespace (spaces or tabs) come before the beginning of each statement. In
+          Python the indentation of statements is significant and the interpreter generates error messages for improper
+          indentation. If we try to put a single space before a statement in the interactive shell, we get
+        </p>
+        <code>
+          >>> print(<span class="code-color">'hi'</span>)
+          File "stdin>", line 1
+            print(<span class="code-color">'hi'</span>)
+            ˆ
+            IndentationError: unexpected indent
+        </code>
+        <p>
+          The interpreter reports a similar error when we attempt to run a saved Python program if the code contains
+          such extraneous indentation.
+        </p>
+      </article>
+    </section>
+    <section class="main-section" id="Integer_and_String_Values">
+      <article>
+              <header>Integer and String Values</header>
+        <p>
+          The number four (4) is an example of a numeric value. In mathematics, 4 is an integer value. Integers
+          are whole numbers, which means they have no fractional parts, and they can be positive, negative, or zero.
+          Examples of integers include 4, −19, 0, and −1005. In contrast, 4.5 is not an integer, since it is not a whole
+          number.
+        </p>
+        <p>
+          Python supports a number of numeric and nonnumeric values. In particular, Python programs can use
+          integer values. The Python statement
+        
+        <code>
+          print(<span class="code-color">4</span>)
+        </code>
+        
+          prints the value 4. Notice that unlike Listing 1.1 (simple.py) and Listing 1.2 (arrow.py) no quotation marks
+          (") appear in the statement. The value 4 is an example of an integer expression. Python supports other types
+          of expressions besides integer expressions. An expression is a basic building block of a Python statement.
+        </p>
+        <p>
+          The number 4 by itself is not a complete Python statement and, therefore, cannot be a program. The
+          interpreter, however, can evaluate a Python expression. You may type the enter 4 directly into the interactive
+          interpreter shell:
+        </p>
+        <code>
+          Python 3.4.3 (v3.4.3:9b73f1c3e601, Feb 24 2015, 22:44:40)
+          [MSC v.1600 64 bit (AM
+          D64)] on win32
+          Type "help", "copyright", "credits" or "license" for more information.
+          >>> 4
+          4
+          >>>
+        </code>
+        <p>
+          The interactive shell attempts to evaluate both expressions and statements. In this case, the expression 4
+          evaluates to 4. The shell executes what is commonly called the read, eval, print loop. This means the
+          interactive shell’s sole activity consists of
+        </p>
+        <ol>
+          <li>reading the text entered by the user,</li>
+          <li>attempting to evaluate the user’s input in the context of what the user has entered up that point, and</li>
+          <li>printing its evaluation of the user’s input.</li>
+        </ol>
+        <p>
+          If the user enters a 4, the shell interprets it as a 4. If the user enters x = 10, a statement has has no overall
+          value itself, the shell prints nothing. If the user then enters x, the shell prints the evaluation of x, which is 10.
+          If the user next enters y, the shell reports a error because y has not been defined in a previous interaction.
+        </p>
+        <p>
+          Python uses the + symbol with integers to perform normal arithmetic addition, so the interactive shell
+          can serve as a handy adding machine:
+        </p>
+        <code>
+          >>> 3 + 4
+          7
+          >>> 1 + 2 + 4 + 10 + 3
+          20
+          >>> print(<span class="code-color">1 + 2 + 4 + 10 + 3</span>)
+          20
+        </code>
+        <p>
+          The last line evaluated shows how we can use the + symbol to add values within a print statement that
+          could be part of a Python program.
+        </p>
+        <p>
+          Consider what happens if we use quote marks around an integer:
+        </p>
+        <code>
+          >>> 19
+          19
+          >>> "19"
+          '19'
+          >>> '19'
+          '19'
+        </code>
+        <p>
+          Notice how the output of the interpreter is different. The expression "19" is an example of a string value.
+          A string is a sequence of characters. Strings most often contain nonnumeric characters:
+        </p>
+        <code>
+          >>> "Fred"
+          'Fred'
+          >>> 'Fred'
+          'Fred
+        </code>
+        <p>
+          Python recognizes both single quotes (') and double quotes (") as valid ways to delimit a string value. The
+          word delimit means to determine the boundaries or limits of something. The left ' symbol determines the beginning of a string, and the right ' symbol that follows specifies the end of the string. If a single quote
+          marks the beginning of a string value, a single quote must delimit the end of the string. Similarly, the double
+          quotes, if used instead, must appear in pairs. You may not mix the two kinds of quotation marks when used
+          to delimit a particular string, as the following interactive sequence shows:
+        </p>
+        <code>
+          >>> 'ABC'
+          'ABC'
+          >>> "ABC"
+          'ABC'
+          >>> 'ABC"
+          File "stdin>", line 1
+            'ABC"
+            ˆ
+            SyntaxError: EOL while scanning string literal
+            >>> "ABC'
+            File ""&lt;<stdin>&lt;", line 1
+              "ABC'
+              ˆ
+              SyntaxError: EOL while scanning string literal
+        </code>
+        <p>
+          The interpreter’s output always uses single quotes, but it accepts either single or double quotes as valid
+          input.
+        </p>
+        <p>
+          The interpreter’s output always uses single quotes, but it accepts either single or double quotes as valid
+          input.
+          Consider the following interaction sequence:
+        </p>
+        <code>
+          >>> 19
+          19
+          >>> "19"
+          '19'
+          >>> '19'
+          '19'
+          >>> "Fred"
+          'Fred'
+          >>> 'Fred'
+          'Fred'
+          >>> Fred
+          Traceback (most recent call last):
+          File "/stdin>", line 1, in module>
+              NameError: name 'Fred' is not defined
+        </code>
+        <p>
+          Notice that with the missing quotation marks the interpreter does not accept the expression Fred.
+        </p>
+        <p>
+          It is important to note that the expressions 4 and '4' are different. One is an integer expression and
+          the other is a string expression. All expressions in Python have a type. The type of an expression indicates
+          the kind of expression it is. An expression’s type is sometimes denoted as its class. At this point we have
+          considered only integers and strings. The built in type function reveals the type of any Python expression:
+        </p>
+        <code>
+          >>> type(4)
+          class 'int'>
+            >>> type('4')
+            class  'str'>
+        </code>
+        <p>
+          Python associates the type name int with integer expressions and str with string expressions.
+        </p>
+        <p>
+          The built-in int function creates an actual integer object from a string that looks like an integer, and the
+          str function creates a string object from the digits that make up an integer:
+        </p>
+        <code>
+          >>> 4
+          4
+          >>> str(<span class="code-color">4</span>)
+          '4'
+          >>> '5'
+          '5'
+          >>> int(<span class="code-color">'5'</span>)
+          5
+        </code>
+        <p>
+          The expression str(4) evaluates to the string value '4', and int('5') evaluates to the integer value 5.
+          The int function applied to an integer evaluates simply to the value of the integer itself, and similarly str
+          applied to a string results in the same value as the original string:
+        </p>
+        <code>
+          >>> int(<span class="code-color">4</span>)
+          4
+          >>> str(<span class="code-color">'Judy'</span>)
+          Judy
+        </code>
+      </article>
+    </section>
+      <section class="main-section" id="Variables_and_Assignment"> 
+        
+        <article>
+          <header>Variables and Assignment</header>
+          <p>
+            In algebra, variables represent numbers. The same is true in Python, except Python variables also can
+            represent values other than numbers. Listing 2.1 (variable.py) uses a variable to store an integer value and
+            then prints the value of the variable.
+          </p>
+          <p class="text-bg-color">
+            Listing 2.1: variable.py
+          </p>
+          <code class="zero-margin">
+            x = 10
+            print(<span class="code-color">x</span>)
+          </code>
+          <p>
+            Listing 2.1 (variable.py) contains two statements:
+          </p>
+          <code>x = 10</code>
+          <p>
+            This is an assignment statement. An assignment statement associates a value with a variable. The
+            key to an assignment statement is the symbol = which is known as the assignment operator. The
+            statement assigns the integer value 10 to the variable x. Said another way, this statement binds the
+            variable named x to the value 10. At this point the type of x is int because it is bound to an integer
+            value.
+          </p>
+          <p>
+            We may assign and reassign a variable as often as necessary. The type of a variable will change if it
+            is reassigned an expression of a different type.
+          </p>
+          
+          <code>print(<span class="code-color">x</span>)</code>
+          <p>
+            This statement prints the variable x’s current value. Note that the lack of quotation marks here is very
+            important. If x has the value 10, the statement
+          
+          <code>print(<span class="code-color">x</span>)</code>
+          
+            prints 10, the value of the variable x, but the statement
+          
+          <code>print(<span class="code-color">'x'</span>)</code>
+          
+            prints x, the message containing the single letter x.
+          </p>
+          <p>
+            The meaning of the assignment operator (=) is different from equality in mathematics. In mathematics,
+            = asserts that the expression on its left is equal to the expression on its right. In Python, = makes the variable
+            on its left take on the value of the expression on its right. It is best to read x = 5 as “x is assigned the value
+            5,” or “x gets the value 5.” This distinction is important since in mathematics equality is symmetric: if
+            x = 5, we know 5 = x. In Python this symmetry does not exist; the statement
+          
+          <code>5 = x</code>
+          
+            attempts to reassign the value of the literal integer value 5, but this cannot be done because 5 is always 5
+            and cannot be changed. Such a statement will produce an error.
+          </p>
+          <code>
+            >>> x = 5
+            >>> x
+            5
+            >>> 5 = x
+            File "stdin", line 1
+              SyntaxError: can't assign to literal
+          </code>
+          <p>
+            We can reassign different values to a variable as needed, as Listing 2.2 (multipleassignment.py) shows.
+          </p>
+          <p class="text-bg-color">
+            Listing 2:2 multiple assignment.py
+          </p>
+          <code class="zero-margin">
+          x = 10
+          print(<span class="code-color">x</span>)
+          x = 20
+          print(<span class="code-color">x</span>)
+          x = 30
+          print(<span class="code-color">x</span>)
+          </code>
+          <p>
+            Observe that each print statement in Listing 2.2 (multipleassignment.py) is identical, but when the program
+            runs (as a program, not in the interactive shell) the print statements produce different results:
+          </p>
+          <p class="black-bg">
+            10
+            20
+            30
+          </p>
+        </article>
+      </section>
+      <section class="main-section" id="Identifiers">
+        
+        <article>
+          <header>Identifiers</header>
+          <p>
+            While mathematicians are content with giving their variables one-letter names like x, programmers should
+            use longer, more descriptive variable names. Names such as sum, height, and sub_total are much better
+            than the equally permissible s, h, and st. A variable’s name should be related to its purpose within the
+            program. Good variable names make programs more readable by humans. Since programs often contain
+            many variables, well-chosen variable names can render an otherwise obscure collection of symbols more
+            understandable.
+          </p>
+          <p>
+            Python has strict rules for variable names. A variable name is one example of an identifier. An identifier
+            is a word used to name things. One of the things an identifier can name is a variable. We will see in later
+            chapters that identifiers name other things such as functions, classes, and methods. Identifiers have the
+            following form:
+          </p>
+          <ul class="no-border-line">
+            <li>An identifiers must contain at least one character.</li>
+            <li>The first character of an identifiers must be an alphabetic letter (upper or lower case) or the underscore</li>
+            <li>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz_0123456789</li>
+            
+            <li>No other characters (including spaces) are permitted in identifiers.</li>
+            <li>A reserved word cannot be used as an identifier</li>
+          </ul>
+          <p>
+            Examples of valid Python identifiers include
+          </p>
+          <ul class="no-border-line">
+            <li>x</li>
+            <li>x2</li>
+            <li>total</li>
+            <li>port_22</li>
+          </ul>
+          <p>
+            None of the following words are valid identifiers:
+          </p>
+          <ul class="no-border-line">
+            <li>sub-total (dash is not a legal symbol in an identifier)</li>
+            <li>first entry (space is not a legal symbol in an identifier)</li>
+            <li>4all (begins with a digit)</li>
+            <li>*2 (the asterisk is not a legal symbol in an identifier)</li>
+          </ul>
+          <p>
+            Python is a case-sensitive language. This means that capitalization matters. if is a reserved word, but
+            none of If, IF, or iF is a reserved word. Identifiers also are case sensitive; the variable called Name is
+            different from the variable called name. Note that three of the reserved words (False, None, and True) are
+            capitalized.
+          </p>
+          <p>
+            Programmers generally avoid distinguishing between two variables in the same context merely by differences
+            in capitalization. Doing so is more likely to confuse human readers. For the same reason, it is
+            considered poor practice to give a variable the same name as a reserved word with one or more of its letters
+            capitalized.
+          </p>
+          <p>
+            The most important thing to remember about a variable’s name is that it should be well chosen. A
+            variable’s name should reflect the variable’s purpose within the program. For example, consider a program
+            controlling a point-of-sale terminal (also known as an electronic cash register). The variable keeping track
+            of the total cost of goods purchased might be named total or total_cost. Variable names such as a67_99
+            and fred would be poor choices for such an application.
+          </p>
+        </article>
+      </section>
+      <section class="main-section" id="Reference"> 
+        
+        <article>
+          <header>Reference</header>
+        <p>
+          For additional content and information click on this link.
+          <a href="http://python.cs.southern.edu/pythonbook/pythonbook.pdf" target="_blank">PYTHON BOOK</a>
+        </p>
+        <footer>
+          &copy;2022  Twumasi Augustine
+        </footer>
+        </article>
+      </section>
+  </main>
+</body>
+</html>

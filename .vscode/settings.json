@@ -1,0 +1,57 @@
+{
+  "diffEditor.wordWrap": "on",
+  "editor.wordWrap": "on",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "highlight-matching-tag.styles": {"opening": {"left": {"custom": {}}}}
+
+  {
+  "opening": {
+  "left": {
+  "custom":}
+  {
+  "borderWidth": "0 0 0 3px",
+  "borderStyle": "solid",
+  "borderColor": "yellow",
+  "borderRadius": "5px",
+  "overviewRulerColor": "white"
+}
+},
+  "right": {
+  "custom": {
+  "borderWidth": "0 3px 0 0",
+  "borderStyle": "solid",
+  "borderColor": "yellow",
+  "borderRadius": "5px",
+  "overviewRulerColor": "white"
+  }
+}
+  }
+}
+{
+  "auto-close-tag.activationOnLanguage": [
+    "xml",
+    "php",
+    "blade",
+    "ejs",
+    "jinja",
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "plaintext",
+    "markdown",
+    "vue",
+    "liquid",
+    "erb",
+    "lang-cfml",
+    "cfml",
+    "HTML (Eex)"
+  ]
+}
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}
